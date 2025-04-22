@@ -2,3 +2,5 @@ transformers
 clap @ git+https://github.com/markjosims/clap-ipa.git
 scikit-learn
 scipy
+torch
+torchaudio
