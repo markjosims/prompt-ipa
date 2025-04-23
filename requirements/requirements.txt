@@ -8,6 +8,8 @@ clap @ git+https://github.com/markjosims/clap-ipa.git@7e6256fb175faa1ef5aafc59e2
     # via -r requirements.in
 colorama==0.4.6 ; sys_platform == 'win32'
     # via tqdm
+ffmpeg==1.4
+    # via -r requirements.in
 filelock==3.18.0
     # via
     #   huggingface-hub
