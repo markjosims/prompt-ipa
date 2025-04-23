@@ -2,6 +2,8 @@
 #    uv pip compile --output-file requirements-gui.txt --universal requirements.in requirements-gui.in
 certifi==2025.1.31
     # via requests
+cffi==1.17.1 ; sys_platform == 'win32'
+    # via soundfile
 charset-normalizer==3.4.1
     # via requests
 clap @ git+https://github.com/markjosims/clap-ipa.git@7e6256fb175faa1ef5aafc59e259bb04a1bb2a2f
@@ -10,8 +12,6 @@ colorama==0.4.6 ; sys_platform == 'win32'
     # via tqdm
 colored==2.3.0
     # via gooey
-ffmpeg==1.4
-    # via -r requirements.in
 filelock==3.18.0
     # via
     #   huggingface-hub
@@ -43,6 +43,8 @@ numpy==2.2.5
     # via
     #   scikit-learn
     #   scipy
+    #   soundfile
+    #   sox
     #   transformers
 nvidia-cublas-cu12==12.4.5.8 ; platform_machine == 'x86_64' and sys_platform == 'linux'
     # via
@@ -87,6 +89,8 @@ pillow==11.2.1
     # via gooey
 psutil==7.0.0
     # via gooey
+pycparser==2.22 ; sys_platform == 'win32'
+    # via cffi
 pygtrie==2.5.0
     # via gooey
 pyyaml==6.0.2
@@ -109,6 +113,10 @@ scipy==1.15.2
     #   scikit-learn
 setuptools==79.0.0
     # via torch
+soundfile==0.13.1 ; sys_platform == 'win32'
+    # via -r requirements.in
+sox==1.5.0 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via -r requirements.in
 sympy==1.13.1
     # via torch
 threadpoolctl==3.6.0
@@ -132,6 +140,7 @@ triton==3.2.0 ; platform_machine == 'x86_64' and sys_platform == 'linux'
 typing-extensions==4.13.2
     # via
     #   huggingface-hub
+    #   sox
     #   torch
 urllib3==2.4.0
     # via requests
