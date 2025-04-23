@@ -41,6 +41,7 @@ networkx==3.4.2
     # via torch
 numpy==2.2.5
     # via
+    #   -r requirements.in
     #   scikit-learn
     #   scipy
     #   soundfile

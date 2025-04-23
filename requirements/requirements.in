@@ -2,6 +2,7 @@ transformers
 clap @ git+https://github.com/markjosims/clap-ipa.git
 scikit-learn
 scipy
+numpy
 torch
 torchaudio
 soundfile; sys_platform == 'win32'
