@@ -63,7 +63,7 @@ class ContextualBiasingASR_Pipeline():
                 )
                 output_text = self.processor.decode(output_ids.squeeze())
                 output['text'] = ' '.join([output['text'].strip(), output_text.strip()])
-                if i<len(inputs)-1:
+                if i<len(inputs['input_features'])-1:
                     prompts[i+1]=' '.join([prompts[i+1].strip(), output_text.strip()])
         return output
 
